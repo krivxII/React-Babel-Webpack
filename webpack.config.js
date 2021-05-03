@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/ejemplo1/index.js',
-       
+        
       },
       plugins: [
         new HtmlWebpackPlugin({
@@ -22,7 +22,7 @@ module.exports = {
     clean: true,
   },
   module: {
-    rules: [
+    rules:[
       {
         test: /\.(js|jsx|mjs)$/,
         exclude: /(node_modules|bower_components)/,
