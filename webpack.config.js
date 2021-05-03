@@ -5,8 +5,8 @@ const webpack = require("webpack");
 module.exports = {
   /////////////////////////////////////////////////
   entry: {
-    index: './src/ejemplo1/index.js',
-
+    index: './src/componente1/index.js',
+   //index: './src/ejemplo1/index.js',
   },
   /////////////////////////////////////////////////
   plugins: [
@@ -16,7 +16,6 @@ module.exports = {
       inject: 'body',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    
   ],
   /////////////////////////////////////////////////////
   mode: "development",
@@ -25,15 +24,15 @@ module.exports = {
     //contentBase: './dist',
     contentBase: path.join(__dirname, "dist/"),
     hotOnly: true,
-    port: 3000,
-    publicPath: "http://localhost:3000/dist/",
+   // port: 3000,
+  //  publicPath: "http://localhost:3000/dist/",
   },
   ///////////////////////////////////////////////////////
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    publicPath: "/dist/",
+   // publicPath: "./dist",  da error
   },
 
   /////////////////////////////////////////////////////// 
