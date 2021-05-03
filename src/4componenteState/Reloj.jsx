@@ -2,7 +2,7 @@ import React, { Component} from "react";
 import {hot} from "react-hot-loader";
 
 
-class Reloj extends React.Component {
+class Toggle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {date: new Date(), count: 0};
@@ -29,6 +29,8 @@ class Reloj extends React.Component {
     }));
   }
 
+
+
   render() {
     return (
       <div>
@@ -41,4 +43,4 @@ class Reloj extends React.Component {
 }
 
 
-export default hot(module)(Reloj);
+export default hot(module)(Toggle);

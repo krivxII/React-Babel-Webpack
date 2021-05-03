@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Reloj from "./Reloj.jsx";
+import Toggle from "./Reloj.jsx";
 
 
-ReactDOM.render( <Reloj></Reloj>, document.getElementById("root"));
+ReactDOM.render( <Toggle></Toggle>, document.getElementById("root"));

@@ -9,8 +9,9 @@ module.exports = {
    //index: './src/ejemplo1/index.js',
    //index: './src/componente2/index.js',
    //index: './src/3componente/index.js',
-  // index: './src/4componenteState/index.js',
-   index: './src/5componenteEvents/index.js',
+   //index: './src/4componenteState/index.js',
+   //index: './src/5componenteEvents/index.js',
+     index: './src/6componenteConRen/index.js',
   },
   /////////////////////////////////////////////////
   plugins: [
