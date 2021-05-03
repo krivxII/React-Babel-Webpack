@@ -5,9 +5,12 @@ const webpack = require("webpack");
 module.exports = {
   /////////////////////////////////////////////////
   entry: {
-    //index: './src/componente1/index.js',
+   //index: './src/componente1/index.js',
    //index: './src/ejemplo1/index.js',
-   index: './src/componente2/index.js',
+   //index: './src/componente2/index.js',
+   //index: './src/3componente/index.js',
+  // index: './src/4componenteState/index.js',
+   index: './src/5componenteEvents/index.js',
   },
   /////////////////////////////////////////////////
   plugins: [
