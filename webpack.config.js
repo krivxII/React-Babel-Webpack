@@ -22,6 +22,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js|jsx|mjs)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env',"@babel/preset-react"]
+          }
+        }
+      },
+      {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
