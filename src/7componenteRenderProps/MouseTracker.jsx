@@ -27,7 +27,7 @@ class Cat extends React.Component {
   
     render() {
       return (
-        <div>
+        
         <div style={{ height: '100vh' }} onMouseMove={this.handleMouseMove}>
   
           {/*
@@ -37,18 +37,7 @@ class Cat extends React.Component {
           <p>The current mouse position is ({this.state.x}, {this.state.y})</p>
           {this.props.render(this.state)}
         </div>
-        <div style={{ height: '100vh' }} onMouseMove={this.handleMouseMove}>
-  
-          {/*
-            Instead of providing a static representation of what <Mouse> renders,
-            use the `render` prop to dynamically determine what to render.
-          */}
-          <p>The current mouse position is ({this.state.x}, {this.state.y})</p>
-          {this.props.render(this.state)}
-        </div>
-        </div>
-        
-        
+
       );
     }
   }
