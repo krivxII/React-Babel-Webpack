@@ -1,6 +1,14 @@
 import React, { Component} from "react";
 import {hot} from "react-hot-loader";
 
+
+function Prueba(props) {
+  return <h1>herman</h1>;
+}
+function Prueba2(props) {
+  return <h1>herman2</h1>;
+}
+
 function UserGreeting(props) {
   return <h1>Welcome back!</h1>;
 }
@@ -38,11 +46,14 @@ class LoginControl  extends React.Component {
     super(props);
     this.handleLoginClick = this.handleLoginClick.bind(this);
     this.handleLogoutClick = this.handleLogoutClick.bind(this);
-    this.state = {isLoggedIn: false};
+    this.elemento = <Prueba></Prueba>;
+    this.state = {isLoggedIn: false, elemento: <Prueba></Prueba>};
   }
 
   handleLoginClick() {
+   
     this.setState({isLoggedIn: true});
+    
   }
 
   handleLogoutClick() {
@@ -62,6 +73,8 @@ class LoginControl  extends React.Component {
       <div>
         <Greeting isLoggedIn={isLoggedIn} />
         {button}
+        {this.elemento}
+        {this.state.elemento}
       </div>
     );
   }

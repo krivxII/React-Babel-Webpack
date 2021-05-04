@@ -11,7 +11,10 @@ module.exports = {
    //index: './src/3componente/index.js',
    //index: './src/4componenteState/index.js',
    //index: './src/5componenteEvents/index.js',
-     index: './src/6componenteConRen/index.js',
+   //index: './src/6componenteConRen/index.js',
+    index: './src/7componenteRenderProps/index.js',
+   
+  
   },
   /////////////////////////////////////////////////
   plugins: [
