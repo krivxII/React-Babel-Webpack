@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import MouseTracker from "./MouseTracker.jsx";
+import Clase from "./Clase.jsx";
+import Function from "./Funcion.jsx"
 
 
-ReactDOM.render( <MouseTracker ></MouseTracker>, document.getElementById("root"));
+ReactDOM.render([<Clase ></Clase>,<Function ></Function>] , document.getElementById("root"));
