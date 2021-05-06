@@ -5,10 +5,10 @@ const webpack = require("webpack");
 module.exports = {
   /////////////////////////////////////////////////
   entry: {
-    //index: './src/ejemplo/index.js',
-    index: './src/1componente/index.js',
-
-
+  //index: './src/ejemplo/index.js',
+  index: './src/1componente/index.js',
+   
+  
   },
   /////////////////////////////////////////////////
   plugins: [
@@ -26,15 +26,15 @@ module.exports = {
     //contentBase: './dist',
     contentBase: path.join(__dirname, "dist/"),
     hotOnly: true,
-    // port: 3000,
-    //  publicPath: "http://localhost:3000/dist/",
+   // port: 3000,
+    //publicPath: "http://localhost:3000/dist/",
   },
   ///////////////////////////////////////////////////////
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    // publicPath: "./dist",  da error
+   // publicPath: "./dist",  da error
   },
 
   /////////////////////////////////////////////////////// 
