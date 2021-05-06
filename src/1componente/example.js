@@ -17,11 +17,12 @@ import {
 
 export default function BasicExample() {
   return (
-    <Router>
+    
+    <Router >
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Homewwww</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -41,7 +42,7 @@ export default function BasicExample() {
           of them to render at a time
         */}
         <Switch>
-          <Route exact path="/">
+          <Route  path="/">
             <Home />
           </Route>
           <Route path="/about">
