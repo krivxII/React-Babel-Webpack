@@ -34,8 +34,12 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+     /*publicPath
+     "./"   da un error en router 
+      "/"   da un error con aplicaciones locales usar con webpack router 
+   */
     publicPath: "/", 
-    //publicPath: "./",da un error en router
+  
   },
 
   /////////////////////////////////////////////////////// 
