@@ -1,85 +1,93 @@
 import React from "react";
+import {hot} from "react-hot-loader";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useRouteMatch,
+  useParams
 } from "react-router-dom";
 
-// This site has 3 pages, all of which are rendered
-// dynamically in the browser (not server rendered).
-//
-// Although the page does not ever refresh, notice how
-// React Router keeps the URL up to date as you navigate
-// through the site. This preserves the browser history,
-// making sure things like the back button and bookmarks
-// work properly.
-const reload = () => window.location.reload();
 
-export default function BasicExample() {
+function App() {
   return (
-    <Router onEnter={reload}>
+    <Router>
+     
       <div>
-        <ul>
-          <li>
-            <Link to="/">Homee</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-        </ul>
+      
+            <Link to="/">Home </Link>
+         
+            <Link to="/about">About </Link>
+        
+            <Link to="/topics">Topics </Link>
+         
 
-        <hr />
-
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
         <Switch>
-          <Route  path="/">
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/about">
+          <Route path="/about">
             <About />
           </Route>
-          <Route exact path="/dashboard">
-            <Dashboard />
+          <Route  path="/topics">
+            <Topics />
           </Route>
         </Switch>
+
+
       </div>
     </Router>
-  );
+  );s
 }
 
-// You can think of these components as "pages"
-// in your app.
-
 function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
+  return <h2>Home</h2>;
 }
 
 function About() {
+  return <h2>About</h2>;
+}
+
+function Topics() {
+  let match = useRouteMatch();
+
   return (
     <div>
-      <h2>About</h2>
+      <h2>Topics s</h2>
+
+      <ul>
+        <li>
+          <Link to={`${match.url}/components`}>
+            Components
+          </Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/props-v-state`}>
+            Props v. State
+          </Link>
+        </li>
+      </ul>
+
+      {/* The Topics page has its own <Switch> with more routes
+          that build on the /topics URL path. You can think of the
+          2nd <Route> here as an "index" page for all topics, or
+          the page that is shown when no topic is selected */}
+      <Switch>
+        <Route path={`${match.path}/:topicId`}>
+          <Topic />
+        </Route>
+        <Route exact path={match.path}>
+          <h3>Please select a topic.</h3>
+        </Route>
+      </Switch>
     </div>
   );
 }
 
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
-  );
+function Topic() {
+  let { topicId } = useParams();
+  return <h3>Requested topic ID: {topicId}</h3>;
 }
+
+export default hot(module)(App)

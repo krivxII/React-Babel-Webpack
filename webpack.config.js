@@ -26,7 +26,6 @@ module.exports = {
     historyApiFallback: true,
     contentBase: path.join(__dirname, "dist/"),
     hotOnly: true,
-    historyApiFallback: true,
    // port: 3000,
    //publicPath: "http://localhost:3000/dist/",
   },
@@ -35,7 +34,7 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    publicPath: "./",
+   // publicPath: "./",
   },
 
   /////////////////////////////////////////////////////// 
