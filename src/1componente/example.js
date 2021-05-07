@@ -14,14 +14,15 @@ import {
 // through the site. This preserves the browser history,
 // making sure things like the back button and bookmarks
 // work properly.
+const reload = () => window.location.reload();
 
 export default function BasicExample() {
   return (
-    <Router>
+    <Router onEnter={reload}>
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Homee</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -82,4 +83,3 @@ function Dashboard() {
     </div>
   );
 }
-
