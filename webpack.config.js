@@ -26,6 +26,7 @@ module.exports = {
     //contentBase: './dist',
     contentBase: path.join(__dirname, "dist/"),
     hotOnly: true,
+    historyApiFallback: true,
    // port: 3000,
     //publicPath: "http://localhost:3000/dist/",
   },
