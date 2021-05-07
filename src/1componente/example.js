@@ -49,7 +49,7 @@ function Home() {
   return <h2>Home</h2>;
 }
 function Hom2e() {
-  return <h2>Home2</h2>;
+  return <h2>No existe esta ruta</h2>;
 }
 
 function About() {
