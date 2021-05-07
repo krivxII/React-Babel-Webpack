@@ -5,10 +5,10 @@ const webpack = require("webpack");
 module.exports = {
   /////////////////////////////////////////////////
   entry: {
-  //index: './src/0ejemplo/index.js',
-  index: './src/1componente/index.js',
-   
-  
+    //index: './src/ejemplo/index.js',
+    index: './src/componente/index.js',
+
+
   },
   /////////////////////////////////////////////////
   plugins: [
@@ -26,20 +26,19 @@ module.exports = {
     historyApiFallback: true,
     contentBase: path.join(__dirname, "dist/"),
     hotOnly: true,
-   // port: 3000,
-   //publicPath: "http://localhost:3000/dist/",
   },
   ///////////////////////////////////////////////////////
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-     /*publicPath
-     "./"   da un error en router 
-      "/"   da un error con aplicaciones locales usar con webpack router 
-   */
-    publicPath: "/", 
-  
+
+    /*publicPath
+    "./"   da un error en router 
+    "/"   da un error con aplicaciones locales usar con webpack router
+    */
+ 
+
   },
 
   /////////////////////////////////////////////////////// 
