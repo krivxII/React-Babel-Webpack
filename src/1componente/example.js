@@ -24,6 +24,7 @@ function App() {
          
 
         <Switch>
+          
           <Route exact path="/">
             <Home />
           </Route>
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route  path="/topics">
             <Topics />
+          </Route>
+          <Route>
+            <Hom2e/>
           </Route>
         </Switch>
 
@@ -44,6 +48,9 @@ function App() {
 function Home() {
   return <h2>Home</h2>;
 }
+function Hom2e() {
+  return <h2>Home2</h2>;
+}
 
 function About() {
   return <h2>About</h2>;
@@ -51,10 +58,11 @@ function About() {
 
 function Topics() {
   let match = useRouteMatch();
+  console.log(match);
 
   return (
     <div>
-      <h2>Topics s</h2>
+      <h2>Topics {match.path +" "+ match.url}  </h2>
 
       <ul>
         <li>
@@ -66,6 +74,7 @@ function Topics() {
           <Link to={`${match.url}/props-v-state`}>
             Props v. State
           </Link>
+          
         </li>
       </ul>
 
@@ -77,7 +86,10 @@ function Topics() {
         <Route path={`${match.path}/:topicId`}>
           <Topic />
         </Route>
-        <Route exact path={match.path}>
+        <Route path={`${match.path}/:topicToken`}>
+          <Topic />
+        </Route>
+        <Route  path={match.path}>
           <h3>Please select a topic.</h3>
         </Route>
       </Switch>
