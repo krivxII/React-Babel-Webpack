@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require("webpack");
+/*const ESLintPlugin = require('eslint-webpack-plugin'); Componentes para la correccion de codigo de react*/
+
 
 module.exports = {
   /////////////////////////////////////////////////
@@ -18,6 +20,7 @@ module.exports = {
       inject: 'body',
     }),
     new webpack.HotModuleReplacementPlugin(),
+	//new ESLintPlugin(), 
   ],
   /////////////////////////////////////////////////////
   mode: "development",
